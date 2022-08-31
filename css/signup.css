@@ -1,0 +1,75 @@
+/* SINGUP */
+.signup-modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.signup-box {
+    position: relative;
+    margin: 200px auto 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 500px;
+    padding: 40px 20px 20px;
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgb(255, 255, 255, 0.1);
+    transition: .2s opacity;
+}
+
+.signup-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.signup-form label h2{
+    color: white;
+    display: inline;
+    font-weight: bolder;
+}
+
+.signup-form input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0 15px;
+    display: inline-block;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.signup-form input#uname:focus {
+    box-shadow: 0 0 10px #047CFF;
+}
+
+.signup-form input[type=text].msg-error {
+    border: 1px solid  red;
+}
+
+.signup-box button {
+    width: 100%;
+}
+
+.signup-box button[type=submit] {
+    margin-top: -5px;
+}
+
+.signup-error {
+    display: none;
+    margin-top: -3px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: red;
+}

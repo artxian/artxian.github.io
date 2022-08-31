@@ -1,0 +1,74 @@
+/* SINGUP */
+div.userEdit-modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 70;
+    overflow: hidden;
+    display: none;
+    background-color: rgb(0, 0, 0, .5);
+    z-index: 1000;
+}
+
+.userEdit-box {
+    position: relative;
+    margin: 200px auto 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 500px;
+    padding: 40px 20px 20px;
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgb(255, 255, 255, 0.1);
+    transition: .2s opacity;
+}
+
+.userEdit-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.userEdit-form label h2{
+    color: white;
+    display: inline;
+    font-weight: bolder;
+}
+
+.userEdit-form p.success {
+    display: none;
+    color: rgb(66, 255, 66);
+}
+
+.userEdit-form p.failed {
+    display: none;
+    color: rgb(255, 50, 50);
+}
+
+.userEdit-form input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0 15px;
+    display: inline-block;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.userEdit-form input#uimg:focus {
+    box-shadow: 0 0 10px #047CFF;
+}
+
+.userEdit-box button {
+    width: 100%;
+}
+
+button.logout {
+    background-color: rgb(255, 50, 50);
+}
