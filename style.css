@@ -105,12 +105,12 @@ button[type=reset] {
 
 header {
     position: fixed;
-    top: 0;
+    top: -0.6px;
     left: 0;
     right: 0;
     height: 70px;
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
@@ -166,6 +166,23 @@ header button.contact {
     font-size: 12px;
     position: absolute;
     right: 20px;
+}
+
+header .nav-hp {
+    position: absolute;
+    right: 47px;
+    z-index: 1;
+    font-size: 35px;
+    text-align: center;
+    font-weight: lighter;
+    color: #007AFF;
+    display: none;
+    animation: navAtasBawah 2s ease;
+    transition: all 500ms;
+}
+
+header .nav-hp.nav-hp-active {
+    transform: rotate(45deg);
 }
 
 /* HEADER NAV */
@@ -230,6 +247,7 @@ main {
     align-items: flex-start;
     justify-content: center;
     scroll-behavior: smooth;
+    background-color: aliceblue;
 }
 
 /* WMI */
@@ -328,3 +346,49 @@ div.wmi2 {
 /* END WMI */
 
 /* END MAIN */
+
+
+/* RESPONSIVE AREA */
+
+
+/* PHONE */
+
+@media screen and (max-width: 700px) {
+
+    /* HEADER */
+
+    .header-icon {
+        left: 10%;
+        width: 60%;
+        text-align: left;
+    }
+    
+    .header-icon a {
+        font-size: 13px;
+    }
+
+    header .nav-hp {
+        right: 10%;
+        display: block;
+    }
+
+    header button.contact {
+        display: none;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    /* END OF HEADER */
+
+
+    /* MAIN */
+
+    main {
+        top: 8em;
+    }
+
+
+
+}

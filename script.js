@@ -51,3 +51,14 @@ document.querySelector('button.go2Top').addEventListener('click', () => {
 document.querySelector('.wmi1 span.age').textContent = getMyAge(2004);
 
 // END OF HOME
+
+// HEADER
+
+document.querySelector('header').addEventListener('click', function(e) {
+    // NAVBAR HP
+    if(e.target.classList.contains('nav-hp')) {
+        e.target.classList.toggle('nav-hp-active');
+    }
+});
+
+// END OF HEADER
