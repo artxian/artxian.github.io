@@ -106,6 +106,16 @@ button[type=reset] {
 
 /* BODY */
 
+@keyframes introFade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes animBawahAtas {
   0% {
     transform: translateY(-200%);
@@ -278,7 +288,7 @@ main {
   position: relative;
   margin: auto;
   top: 0px;
-  padding-top: 150px;
+  padding-top: 25vh;
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -343,17 +353,7 @@ main div.wmi1 {
 .wmi1 button {
   margin-top: 40px;
   font-size: 17px;
-  animation: wmiBtn 10s ease;
-}
-
-@keyframes wmiBtn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
+  animation: introFade 10s ease;
 }
 
 div.wmi2 {
@@ -472,7 +472,7 @@ footer div {
   /* MAIN */
 
   main {
-    padding-top: 35%;
+    padding-top: 25vh;
     padding-left: 8%;
     padding-right: 8%;
 
