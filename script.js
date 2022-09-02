@@ -48,7 +48,9 @@ document.querySelector('button.go2Top').addEventListener('click', () => {
 
 // HOME
 
-document.querySelector('.wmi1 span.age').textContent = getMyAge(2004);
+setInterval(() => {
+    document.querySelector('.wmi1 span.age').textContent = getMyAge(2004);
+}, 1000);
 
 // END OF HOME
 

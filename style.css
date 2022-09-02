@@ -232,6 +232,7 @@ header .nav-hp {
   font-weight: lighter;
   color: rgb(0, 0, 0, 0.8);;
   display: none;
+  user-select: none;
   animation: introKananKiri 2s ease;
   transition: all 300ms;
 }
@@ -288,12 +289,12 @@ main {
   position: relative;
   margin: auto;
   top: 0px;
-  padding-top: 27vh;
+  padding-top: 24vh;
   overflow: hidden;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: center;  
   scroll-behavior: smooth;
 }
 
@@ -316,7 +317,7 @@ main div.wmi1 {
   display: inline-block;
   font-weight: 900;
   font-size: 126px;
-  letter-spacing: -3px;
+  letter-spacing: -2px;
   animation: wmih1Goyang 1.7s ease-in-out infinite alternate;
 }
 
@@ -335,7 +336,7 @@ main div.wmi1 {
   font-size: 20px;
   width: 90%;
   line-height: 28.5px;
-  margin-top: 10px;
+  margin-top: 15px;
   text-align: left;
   animation: wmiP 5s ease;
 }
@@ -379,13 +380,9 @@ div.wmi2 {
 
 /* FOOTER */
 
-footer {
-  position: relative;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin-top: 60vw;
-  height: 25vw;
+footer#footer {
+  margin-top: 200px;
+  padding: 42px 0;
   background-color: rgba(0, 122, 255, 1);
   display: flex;
   align-items: center;
@@ -393,8 +390,8 @@ footer {
   justify-content: center;
 }
 
-footer .follow-up {
-  display: flex;
+footer div {
+  margin: 6px 0;
 }
 
 footer div.follow-up a {
@@ -405,14 +402,6 @@ footer div.follow-up a {
   padding: 6px 12px;
   margin: 0 6px;
   border-radius: 6px;
-}
-
-footer div {
-  margin: 6px 0;
-}
-
-footer .follow-up a {
-  font-size: 2vw;
 }
 
 footer .copyright {
@@ -430,7 +419,7 @@ footer .copyright {
 
 @media screen and (max-width: 1115px) {
   main div.wmi1 {
-    width: 455px;
+    width: 465px;
   }
 
   .wmi1 h1 {
@@ -529,7 +518,6 @@ footer .copyright {
 
   /* END OF MAIN */
 
-
   /* FOOTER */
 
   footer .follow-up a {
@@ -539,7 +527,6 @@ footer .copyright {
   footer .copyright {
     font-size: 2.25vw;
   }
-  
+
   /* END OF FOOTER */
-  
 }
