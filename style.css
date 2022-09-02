@@ -294,7 +294,7 @@ main {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: center;  
+  justify-content: center;
   scroll-behavior: smooth;
 }
 
@@ -395,13 +395,10 @@ footer div {
 }
 
 footer div.follow-up a {
-  font-size: 1.5vw;
-  background-color: rgba(0, 0, 0, .8);
+  font-size: 4vw;
   color: rgba(255, 255, 255, 1);
   text-decoration: none;
-  padding: 6px 12px;
   margin: 0 6px;
-  border-radius: 6px;
 }
 
 footer .copyright {
@@ -519,10 +516,6 @@ footer .copyright {
   /* END OF MAIN */
 
   /* FOOTER */
-
-  footer .follow-up a {
-    font-size: 2vw;
-  }
 
   footer .copyright {
     font-size: 2.25vw;
