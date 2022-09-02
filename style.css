@@ -253,10 +253,20 @@ main {
 
 main div.wmi {
     display: flex;
+    animation: wmiBawahAtas 2s ease;
+}
+
+@keyframes wmiKiriKanan {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 main div.wmi1 {
-    animation: wmiKiriKanan 2s ease;
     box-sizing: border-box;
     padding: 5px;
 }
@@ -314,16 +324,6 @@ main div.wmi1 {
 
     100% {
         opacity: 1;
-    }
-}
-
-@keyframes wmiKiriKanan {
-    0% {
-        transform: translateX(-100%);
-    }
-
-    100% {
-        transform: translateX(0);
     }
 }
 
