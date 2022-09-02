@@ -100,6 +100,39 @@ button[type=reset] {
 /* END BUTTON */
 
 
+/* BODY */
+
+@keyframes animBawahAtas {
+    0% {
+        transform: translateY(-200%);
+    }
+
+    20% {
+        transform: translateY(10%);
+    }
+
+    45% {
+        transform: translateY(-10%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes introKananKiri {
+    0% {
+        transform: translate3d(200%, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(-10%, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
 
 /* HEADER */
 
@@ -110,8 +143,8 @@ header {
     right: 0;
     height: 70px;
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(15px);
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -163,9 +196,16 @@ header img:hover {
 }
 
 header button.contact {
-    font-size: 12px;
     position: absolute;
+    font-size: 12px;
     right: 20px;
+    background-color: rgb(0, 0, 0, 0.8);
+    transition: all 300ms;
+    animation: introKananKiri 3s ease-in-out;
+}
+
+header button.contact:hover {
+    background-color: #007AFF;
 }
 
 header .nav-hp {
@@ -175,13 +215,14 @@ header .nav-hp {
     font-size: 35px;
     text-align: center;
     font-weight: lighter;
-    color: #007AFF;
+    color: rgb(0, 0, 0, 0.8);;
     display: none;
-    animation: navAtasBawah 2s ease;
-    transition: all 500ms;
+    animation: introKananKiri 2s ease;
+    transition: all 300ms;
 }
 
 header .nav-hp.nav-hp-active {
+    color:#007AFF;
     transform: rotate(45deg);
 }
 
@@ -196,17 +237,8 @@ nav {
     flex-direction: row;
     justify-content: space-evenly;
     transition: all ease 1000ms;
-    animation: navAtasBawah 2s ease;
-}
-
-@keyframes navAtasBawah {
-    0% {
-        transform: translate3d(0, -200%, 0);
-    }
-
-    100% {
-        transform: translate3d(0, 0, 0);
-    }
+    animation: navKananKiri 2s ease;
+    display: none;
 }
 
 nav a {
@@ -240,7 +272,9 @@ nav a:active {
 main {
     position: relative;
     margin: auto;
-    top: 150px;
+    top: 0px;
+    height: 2000px;
+    padding-top: 150px;
     overflow: hidden;
     display: flex;
     flex-direction: row;
@@ -253,22 +287,13 @@ main {
 
 main div.wmi {
     display: flex;
-    animation: wmiBawahAtas 2s ease;
-}
-
-@keyframes wmiBawahAtas {
-    0% {
-        transform: translateY(100vh);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
+    justify-content: center;
 }
 
 main div.wmi1 {
     box-sizing: border-box;
-    padding: 5px;
+    width: 700px;
+    animation: animBawahAtas 6s ease;
 }
 
 .wmi1 h1 {
@@ -293,9 +318,9 @@ main div.wmi1 {
 
 .wmi1 p {
     color: rgba(0, 0, 0,.7);
-    font-size: 20px; 
+    font-size: 20px;
+    width: 90%;
     line-height: 28.5px;
-    width: 650px;
     margin-top: 10px;
     text-align: left;
     animation: wmiP 5s ease;
@@ -330,6 +355,7 @@ main div.wmi1 {
 div.wmi2 {
     display: flex;
     width: 270px;
+    animation: animBawahAtas 3s ease;
 }
 
 .wmi2 img {
@@ -340,6 +366,7 @@ div.wmi2 {
     border-bottom-right-radius: 100%;
     border-top-right-radius: 100%;
     border-top-left-radius: 10%;
+    transition: all 2s;
 }
 
 /* END WMI */
@@ -349,6 +376,35 @@ div.wmi2 {
 
 /* RESPONSIVE AREA */
 
+/* TABLET */
+
+@media screen and (max-width: 1115px) {
+    main div.wmi1 {
+        width: 455px;
+    }
+
+    .wmi1 h1 {
+        font-size: 85px;
+    }
+
+    .wmi1 p {
+        font-size: 14px;
+        width: 93%;
+    }
+
+    div.wmi2 {
+        width: 210px;
+    }
+
+    div.wmi2 img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* TABLET AREA */
+
+
 
 /* PHONE */
 
@@ -356,18 +412,22 @@ div.wmi2 {
 
     /* HEADER */
 
+    header {
+        height: 70px;
+    }
+
     .header-icon {
-        left: 10%;
-        width: 60%;
+        left: 8%;
+        width: 45%;
         text-align: left;
     }
     
     .header-icon a {
-        font-size: 13px;
+        font-size: 70%;
     }
 
     header .nav-hp {
-        right: 10%;
+        right: 8%;
         display: block;
     }
 
@@ -385,9 +445,35 @@ div.wmi2 {
     /* MAIN */
 
     main {
-        top: 8em;
+        padding-top: 35%;
+        padding-left: 8%;
+        padding-right: 8%;
+
     }
 
+    main div.wmi {
+        flex-direction: column;
+    }
 
+    main div.wmi1 {
+        width: 100%;
+    }
+    
+    .wmi1 h1 {
+        font-size: 62px;
+    }
+    
+    .wmi1 p {
+        line-height: 20px;
+        width: 100%;
+    }
 
+    .wmi1 button {
+        display: none;
+    }
+
+    div.wmi2 {
+        display: none;
+    }
 }
+
