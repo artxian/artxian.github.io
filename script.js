@@ -13,9 +13,9 @@ window.addEventListener('scroll', () => {
     if(currentScroll <= lastScroll) {
         document.querySelector('header').classList.remove('scroll-down');
 
-        document.querySelector('button.go2Top').style.opacity = 0;
+        document.querySelector('.go2Top').style.opacity = 0;
         setTimeout(() => {
-            document.querySelector('button.go2Top').removeAttribute('style');
+            document.querySelector('.go2Top').removeAttribute('style');
         }, 300);
     }
 
@@ -25,9 +25,9 @@ window.addEventListener('scroll', () => {
 
     if(currentScroll >= scrollAble) {
         document.querySelector('header').classList.remove('scroll-down');
-        document.querySelector('button.go2Top').style.display = 'block';
+        document.querySelector('.go2Top').style.display = 'block';
         setTimeout(() => {
-            document.querySelector('button.go2Top').style.opacity = 100;
+            document.querySelector('.go2Top').style.opacity = 100;
         }, 0);
     }
     
@@ -35,21 +35,21 @@ window.addEventListener('scroll', () => {
 });
 
 // GOTO TOP
-document.querySelector('button.go2Top').addEventListener('click', () => {
+document.querySelector('.go2Top').addEventListener('click', () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 
     
-    document.querySelector('button.go2Top').style.opacity = 0;
+    document.querySelector('.go2Top').style.opacity = 0;
     setTimeout(() => {
-        document.querySelector('button.go2Top').removeAttribute('style');
+        document.querySelector('.go2Top').removeAttribute('style');
     }, 300)
 });
 
 // HOME
 
 setInterval(() => {
-    document.querySelector('.wmi1 span.age').textContent = getMyAge(2004);
+    document.querySelector('.intro_tagline span.age').textContent = getMyAge(2004);
 }, 1000);
 
 // END OF HOME
