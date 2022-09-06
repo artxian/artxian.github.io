@@ -46,14 +46,6 @@ document.querySelector('.go2Top').addEventListener('click', () => {
     }, 300)
 });
 
-// HOME
-
-setInterval(() => {
-    document.querySelector('.intro_tagline span.age').textContent = getMyAge(2004);
-}, 1000);
-
-// END OF HOME
-
 // HEADER
 
 document.querySelector('header').addEventListener('click', function(e) {
@@ -64,3 +56,11 @@ document.querySelector('header').addEventListener('click', function(e) {
 });
 
 // END OF HEADER
+
+// ON WINDOW LOAD
+
+window.addEventListener('load', () => {
+    
+});
+
+// END OF ON WINDOW LOAD

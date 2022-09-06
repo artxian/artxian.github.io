@@ -16,7 +16,6 @@ html {
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  min-height: 40px;
   background-color: rgba(0, 122, 255, 0.5);
 }
 
@@ -214,10 +213,20 @@ header .nav-hp.nav-hp-active {
 
 /* END HEADER */
 
+/* MAIN */
+
+main {
+  width: 100%;
+  padding: 0 150px;
+  max-width: 1600px;
+  min-height: 100vh;
+}
+
+/* END OF MAIN */
+
 /* FOOTER */
 
 footer#footer {
-  margin-top: 100vh;
   padding: 36px 0;
   display: flex;
   align-items: center;
@@ -236,13 +245,8 @@ footer div.follow-up a {
 }
 
 footer a.copyright {
-  text-decoration: none;
-}
-
-footer .copyright div {
   font-size: 1.25vw;
   font-weight: 300;
-  cursor: pointer;
 }
 
 /* END OF FOOTER */
