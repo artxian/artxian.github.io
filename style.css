@@ -33,12 +33,13 @@ html {
   padding: 0;
   font-family: "Inter";
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: #ffffff;
   color: #444452;
-  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -80,7 +81,7 @@ a:hover {
   background-color: rgb(0, 0, 0, 0);
   border: 1px solid #007aff;
   border-radius: 6px;
-  padding: 12px 18px;
+  padding: 0.9em 1.5em;
   box-sizing: border-box;
   cursor: pointer;
   font-size: 15px;
@@ -232,6 +233,7 @@ footer#footer {
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
 }
 
 footer div {
@@ -239,13 +241,13 @@ footer div {
 }
 
 footer div.follow-up a {
-  font-size: 4vw;
+  font-size: 200%;
   text-decoration: none;
   margin: 0 6px;
 }
 
 footer a.copyright {
-  font-size: 1.25vw;
+  font-size: 100%;
   font-weight: 300;
 }
 
@@ -260,7 +262,7 @@ footer a.copyright {
 
 /* PHONE AREA */
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   header div.nav button.resume {
     display: none;
   }
@@ -271,5 +273,13 @@ footer a.copyright {
 
   header .nav-hp {
     display: block;
+  }
+
+  footer div.follow-up a {
+    font-size: 170%;
+  }
+
+  footer a.copyright {
+    font-size: 80%;
   }
 }
