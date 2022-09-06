@@ -1,2 +1,2 @@
 # artxian.github.io
-Website for my Porfolio
+The first iteration of drian.xyz hosted with GitHub Pages
