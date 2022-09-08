@@ -1,2 +1,2 @@
 # artxian.github.io
-The first iteration of drian.xyz hosted with GitHub Pages
+The first iteration of drian.xyz
