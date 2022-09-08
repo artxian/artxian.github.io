@@ -16,7 +16,7 @@ html {
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: rgba(0, 122, 255, 0.5);
+  background-color: rgba(6, 13, 13, 0.5);
 }
 
 ::-webkit-scrollbar-track {
@@ -38,18 +38,18 @@ html {
 }
 
 body {
-  background-color: #ffffff;
-  color: #444452;
+  background-color: #fbfbfd;
+  color: #060D0D;
 }
 
 a {
   text-decoration: none;
-  color: #444452;
+  color: #060D0D;
   transition: 0.25s ease;
 }
 
 a:hover {
-  color: #007aff;
+  color: #004bcc;
 }
 
 .scroll-down {
@@ -77,9 +77,9 @@ a:hover {
 /* BUTTON */
 
 .btn {
-  color: #007aff;
+  color: #004bcc;
   background-color: rgb(0, 0, 0, 0);
-  border: 1px solid #007aff;
+  border: 1px solid #004bcc;
   border-radius: 6px;
   padding: 0.9em 1.5em;
   box-sizing: border-box;
@@ -150,15 +150,16 @@ header {
   backdrop-filter: blur(15px);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   transition: all 300ms;
   z-index: 11;
 }
 
 header nav {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
   width: 100%;
 }
 
@@ -169,12 +170,13 @@ header nav {
 .header-icon a {
   font-size: 24px;
   font-weight: 700;
-  color: #007aff;
+  color: #004bcc;
   text-decoration: none;
 }
 
-header div.nav {
+header nav div.nav {
   display: flex;
+  gap: 15px;
 }
 
 header div.nav ol {
@@ -182,25 +184,24 @@ header div.nav ol {
   align-items: center;
   list-style-type: none;
   font-size: 13px;
+  gap: 25px;
 }
 
 header div.nav ol li a {
-  margin: 0 10px;
   font-size: 1em;
 }
 
-header button.resume {
+header div.nav button.resume {
   font-size: 12px;
-  margin-left: 15px;
   transition: all 250ms;
   animation: introKananKiri 3s ease-in-out;
 }
 
 header .nav-hp {
-  font-size: 35px;
+  font-size: 4vmax;
   text-align: center;
   font-weight: lighter;
-  color: #444452;
+  color: #060D0D;
   display: none;
   user-select: none;
   animation: introKananKiri 2s ease;
@@ -208,7 +209,7 @@ header .nav-hp {
 }
 
 header .nav-hp.nav-hp-active {
-  color: #007aff;
+  color: #004bcc;
   transform: rotate(45deg);
 }
 
@@ -240,14 +241,16 @@ footer div {
   margin: 6px 0;
 }
 
-footer div.follow-up a {
-  font-size: 200%;
+footer div.follow-up i {
+  font-size: 2vmax;
   text-decoration: none;
-  margin: 0 6px;
+  margin: 0 3px;
+  padding: 5px;
+  user-select: none;
 }
 
 footer a.copyright {
-  font-size: 100%;
+  font-size: 1vmax;
   font-weight: 300;
 }
 
@@ -262,7 +265,11 @@ footer a.copyright {
 
 /* PHONE AREA */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
+  .header-icon a {
+    font-size: 4vmax;
+  }
+  
   header div.nav button.resume {
     display: none;
   }
@@ -275,11 +282,11 @@ footer a.copyright {
     display: block;
   }
 
-  footer div.follow-up a {
-    font-size: 170%;
+  footer div.follow-up i {
+    font-size: 4vmax;
   }
 
   footer a.copyright {
-    font-size: 80%;
+    font-size: 1.7vmax;
   }
 }
