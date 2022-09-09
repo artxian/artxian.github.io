@@ -1,10 +1,5 @@
-@import url("https://rsms.me/inter/inter.css");
+@import url("/fonts/Inter/inter.css");
 @import url("/fonts/sf-mono/style.css");
-@supports (font-variation-settings: normal) {
-  html {
-    font-family: "Inter Var", sans-serif;
-  }
-}
 
 
 ::-webkit-scrollbar {
@@ -67,13 +62,11 @@ a.text::after {
   width: 100%;
   height: 0.07em;
   background-color: #004bcc;
-  opacity: 0;
   transform: translate3d(-100%, 0, 0);
-  transition: opacity 250ms, transform 250ms;
+  transition: transform 250ms;
 }
 
 a.text:hover::after, a.text.focus::after {
-  opacity: 1;
   transform: translate3d(0, 0, 0);
 }
 
@@ -105,8 +98,8 @@ a.text:hover::after, a.text.focus::after {
   color: #004bcc;
   background-color: rgb(0, 0, 0, 0);
   border: 1px solid #004bcc;
-  border-radius: 6px;
-  padding: 0.9em 1.5em;
+  border-radius: 5px;
+  padding: 0.9em 1.2em;
   box-sizing: border-box;
   cursor: pointer;
   font-size: 15px;
@@ -130,13 +123,42 @@ a.text:hover::after, a.text.focus::after {
   background-position: center;
 }
 
-.pointer {
+.emoji.pointer {
   background-image: url(img/emojis/pointright.png);
+}
+
+.emoji.wave {
+  background-image: url(img/emojis/wave.png);
 }
 
 /* END OF EMOJI */
 
 /* BODY */
+@keyframes animWave {
+  0% {
+    transform: translateX(0) rotateZ(0deg);
+  }
+
+  20% {
+    transform: translateX(-10%) rotateZ(-10deg);
+  }
+
+  40% {
+    transform: translateX(10%) rotateZ(10deg);
+  }
+
+  60% {
+    transform: translateX(-10%) rotateZ(-10deg);
+  }
+
+  80% {
+    transform: translateX(10%) rotateZ(10deg);
+  }
+
+  100% {
+    transform: translateX(0) rotateZ(0deg);
+  }
+}
 
 @keyframes introFade {
   0% {
@@ -217,7 +239,7 @@ header nav {
 
 header nav div.nav {
   display: flex;
-  gap: 15px;
+  gap: 25px;
 }
 
 header div.nav ol {
@@ -229,11 +251,13 @@ header div.nav ol {
 }
 
 header div.nav ol li a {
+  font-family: "SF Mono regular";
   font-size: 1em;
 }
 
-header div.nav button.resume {
-  font-size: 12px;
+header div.nav a.resume {
+  font-family: "SF Mono regular";
+  font-size: 13px;
   transition: all 250ms;
   animation: introKananKiri 3s ease-in-out;
 }
@@ -278,17 +302,31 @@ main section.hero {
 }
 
 section.hero h3 {
-  margin: 0 0 0 4px;
+  margin: 0 0 25px 4px;
   color: #004bcc;
-  font-family: "SF Mono Regular";
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 32px;
+  font-weight: 300;
+}
+
+h3 span.emoji.wave {
+  width: 40px;
+  height: 40px;
+  vertical-align: text-bottom;
+}
+
+h3 span.emoji.wave:hover {
+  animation: animWave 750ms ease;
+  cursor: grab;
 }
 
 section.hero h1 {
   color: #060D0D;
   font-size: 70px;
-  max-width: 499px;
+  max-width: 700px;
+}
+
+h1 span {
+  font-weight: 200;
 }
 
 section.hero p {
@@ -298,6 +336,7 @@ section.hero p {
 }
 
 section.hero h2 {
+  margin: 20px 0 0 0;
   font-size: 18px;
   font-weight: 400;
 }
@@ -328,7 +367,7 @@ footer div {
   margin: 6px 0;
 }
 
-footer div.follow-up i {
+footer div.follow-up i {  
   font-size: 2vmax;
   text-decoration: none;
   margin: 0 3px;
@@ -337,8 +376,8 @@ footer div.follow-up i {
 }
 
 footer a.copyright {
+  font-family: "SF Mono light";
   font-size: 1vmax;
-  font-weight: 300;
 }
 
 /* END OF FOOTER */
@@ -355,7 +394,7 @@ footer a.copyright {
 
 
 @media screen and (max-width: 768px) {
-  header div.nav button.resume {
+  header div.nav a.resume {
     display: none;
   }
 
