@@ -91,7 +91,6 @@ div.modal {
   z-index: 11;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.01);
   backdrop-filter: blur(0);
   transition: all 800ms ease;
 }
@@ -231,6 +230,45 @@ div.modal.active {
   }
 }
 
+/* NAVMENU */
+
+div.nav-menu {
+  position: fixed;
+  z-index: 11;
+  right: -200%;
+  height: 100%;
+  width: min(75vw, 400px);
+  box-shadow: -20px 0 75px rgba(0, 0, 0, 0.25);
+  background-color: #fbfbfd;
+  padding: min(50px) min(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 70px;
+  align-items: center;
+  transition: 250ms ease-in-out;
+}
+
+div.nav-menu.active {
+  right: 0;
+}
+
+div.nav-menu ol {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+div.nav-menu ol li a{
+  font-family: "SF Mono regular";
+  font-size: 20px;
+}
+
+/* END OF NAVMENU */
+
 /* HEADER */
 
 header {
@@ -345,13 +383,13 @@ section.hero h3 {
   font-weight: 300;
 }
 
-h3 span.emoji.wave {
+section.hero h3 span.emoji.wave {
   width: 40px;
   height: 40px;
   vertical-align: text-bottom;
 }
 
-h3 span.emoji.wave:hover {
+section.hero h3 span.emoji.wave:hover {
   animation: animWave 750ms ease;
   cursor: grab;
 }
@@ -362,7 +400,7 @@ section.hero h1 {
   max-width: 700px;
 }
 
-h1 span {
+section.hero h1 span {
   font-weight: 200;
 }
 
@@ -378,7 +416,7 @@ section.hero h2 {
   font-weight: 400;
 }
 
-h2 span.emoji.pointer {
+section.hero h2 span.emoji.pointer {
   margin: 0 10px;
   height: 30px;
   width: 30px;
@@ -398,10 +436,7 @@ footer#footer {
   flex-direction: column;
   justify-content: center;
   width: 100%;
-}
-
-footer div {
-  margin: 6px 0;
+  gap: 25px;
 }
 
 footer div.follow-up i {
@@ -414,6 +449,7 @@ footer div.follow-up i {
 
 footer a.copyright {
   font-family: "SF Mono light";
+  text-align: center;
   font-size: 1vmax;
 }
 
@@ -445,27 +481,6 @@ footer a.copyright {
   }
   
   /* END OF HEADER */
-  
-  /* NAVMENU */
-
-  div.nav-menu {
-    position: fixed;
-    z-index: 11;
-    right: -200%;
-    height: 100%;
-    min-width: 85px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    box-shadow: -20px 0 75px rgba(0, 0, 0, 0.25);
-    background-color: #fbfbfd;
-    transition: 250ms ease-in-out;
-  }
-
-  div.nav-menu.active {
-    right: 0;
-  }
-
-  /* END OF NAVMENU */
 
   header div.nav a.resume {
     display: none;
@@ -501,5 +516,13 @@ footer a.copyright {
 
   div#content main {
     padding: 0 25px;
+  }
+
+  footer div.follow-up i {
+    font-size: 3.5vmax;
+  }
+
+  footer a.copyright {
+    font-size: 1.5vmax;
   }
 }
