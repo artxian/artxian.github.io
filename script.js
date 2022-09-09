@@ -65,6 +65,13 @@ document.querySelector('.modal').addEventListener('click', function() {
     document.querySelector('div.nav-menu').classList.toggle('active');
 });
 
+const closeNavMenu = () => {
+    document.querySelector('.nav-hp').classList.toggle('nav-hp-active');
+    document.querySelector('body').classList.toggle('blur');
+    document.querySelector('.modal').classList.toggle('active');
+    document.querySelector('div.nav-menu').classList.toggle('active');
+}
+
 // END OF NAVMENU
 
 // ON WINDOW LOAD
