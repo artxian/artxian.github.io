@@ -441,6 +441,7 @@ section.about h2.section-heading {
 section.about div {
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
   gap: 50px;
 }
 
@@ -451,6 +452,7 @@ section.about img {
 
 section.about div div {
   display: flex;
+  max-width: 399px;
   flex-direction: column;
   justify-content: flex-start;
 }
