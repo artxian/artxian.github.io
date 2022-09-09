@@ -46,16 +46,26 @@ document.querySelector('.go2Top').addEventListener('click', () => {
     }, 300)
 });
 
-// HEADER
+// NAVMENU
 
-document.querySelector('header').addEventListener('click', function(e) {
+document.querySelector('body').addEventListener('click', function(e) {
     // NAVBAR HP
     if(e.target.classList.contains('nav-hp')) {
         e.target.classList.toggle('nav-hp-active');
+        document.querySelector('body').classList.toggle('blur');
+        document.querySelector('.modal').classList.toggle('active');
+        document.querySelector('div.nav-menu').classList.toggle('active');
     }
 });
 
-// END OF HEADER
+document.querySelector('.modal').addEventListener('click', function() {
+    document.querySelector('.nav-hp').classList.toggle('nav-hp-active');
+    document.querySelector('body').classList.toggle('blur');
+    document.querySelector('.modal').classList.toggle('active');
+    document.querySelector('div.nav-menu').classList.toggle('active');
+});
+
+// END OF NAVMENU
 
 // ON WINDOW LOAD
 
