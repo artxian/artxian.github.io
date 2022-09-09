@@ -3,7 +3,7 @@ const getMyAge = function (year) {
     return age;
 }
 
-// SCROLL
+// ON WINDOW SCROLL
 let lastScroll = 0;
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
@@ -33,6 +33,18 @@ window.addEventListener('scroll', () => {
     
     lastScroll = currentScroll;
 });
+
+// ON WINDOW RESIZE 
+window.addEventListener('resize', () => {
+
+    // NAV-MENU
+    if(window.innerWidth > 768 && document.querySelector('.nav-hp').classList.contains('nav-hp-active')) {
+        document.querySelector('.nav-hp').classList.toggle('nav-hp-active');
+        document.querySelector('body').classList.toggle('blur');
+        document.querySelector('.modal').classList.toggle('active');
+        document.querySelector('div.nav-menu').classList.toggle('active');
+    }
+})
 
 // GOTO TOP
 document.querySelector('.go2Top').addEventListener('click', () => {

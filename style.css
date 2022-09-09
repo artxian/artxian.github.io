@@ -407,6 +407,7 @@ section.hero h1 span {
 section.hero p {
   margin: 0 0 0 3px;
   font-size: 18px;
+  line-height: 1.5em;
   max-width: 570px;
 }
 
@@ -424,6 +425,42 @@ section.hero h2 span.emoji.pointer {
 }
 
 /* END OF SECTION HERO */
+
+/* SECTION ABOUT */
+
+section.about {
+  padding: 100px 0;
+  max-width: 900px;
+}
+
+section.about h2.section-heading {
+  font-size: 30px;
+  margin: 0 0 36px 0;
+}
+
+section.about div {
+  display: flex;
+  justify-content: flex-start;
+  gap: 50px;
+}
+
+section.about img {
+  filter: blur(10px);
+  border-radius: 7px;
+}
+
+section.about div div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+section.about div div p {
+  font-size: 18px;
+  line-height: 1.5em;
+}
+
+/* END OF SECTION ABOUT */
 
 /* END OF MAIN */
 
