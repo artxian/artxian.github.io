@@ -51,6 +51,7 @@ a.text {
   transition: 0.25s ease;
   position: relative;
   display: inline-block;
+  vertical-align: bottom;
 }
 
 a.text::after {
@@ -421,7 +422,7 @@ section.hero h2 span.emoji.pointer {
   margin: 0 10px;
   height: 30px;
   width: 30px;
-  vertical-align: text-bottom;
+  vertical-align: bottom;
 }
 
 /* END OF SECTION HERO */
@@ -434,14 +435,22 @@ section.about {
 }
 
 section.about h2.section-heading {
+  display: flex;
+  align-items: center;
   font-size: 30px;
   margin: 0 0 36px 0;
+}
+
+section.about h2.section-heading::after {
+  content: '';
+  background-color: #060d0d;
+  height: 1px;
+  width: 300px;
 }
 
 section.about div.about-div {
   display: flex;
   justify-content: flex-start;
-  flex-wrap: wrap;
   gap: 50px;
 }
 
@@ -473,15 +482,15 @@ section.about div.about-div div.about-headshot-wrapper::before {
 
 section.about div.about-div div.about-headshot-wrapper::after {
   border: 2px solid #004bcc;
-  top: 15px;
-  left: 15px;
+  top: 20px;
+  left: 20px;
   z-index: -1;
 }
 
 section.about div.about-div div.about-headshot-wrapper img {
   border-radius: 4px;
   mix-blend-mode: multiply;
-  filter: grayscale(100%) contrast(1) brightness(1.5);
+  filter: grayscale(100%) contrast(1);
   transition: all 250ms cubic-bezier(0.65, 0.05, 0.36, 1)
 }
 
@@ -490,9 +499,11 @@ section.about div.about-div div.about-headshot-wrapper img:hover{
   filter: grayscale(0%);
 }
 
+
+
 section.about div.about-div div.about-text {
   display: flex;
-  max-width: 399px;
+  max-width: 550px;
   flex-direction: column;
   justify-content: flex-start;
 }
@@ -550,6 +561,14 @@ footer a.copyright {
   div#content main {
     padding: 0 100px;
   }
+
+  /* SECTION ABOUT */
+
+  section.about h2.section-heading::after {
+    width: 200px;
+  }
+  
+  /* END OF SECTION ABOUT */
 }
 
 @media screen and (max-width: 768px) {
@@ -577,6 +596,22 @@ footer a.copyright {
     padding: 0 50px;
   }
 
+  /* SECTION ABOUT */
+
+  section.about div.about-div div.about-text {
+    max-width: 100%;
+  }
+
+  section.about div.about-div {
+    flex-direction: column;
+  }
+
+  section.about div.about-div div.about-headshot-wrapper {
+    margin: 25px auto 0;
+  }
+  
+  /* END OF SECTION ABOUT */
+
   footer div.follow-up i {
     font-size: 4vmax;
   }
@@ -596,6 +631,14 @@ footer a.copyright {
   div#content main {
     padding: 0 25px;
   }
+
+  /* SECTION ABOUT */
+
+  section.about div.about-div div.about-text p {
+    font-size: 16px;
+  }
+  
+  /* END OF SECTION ABOUT */
 
   footer div.follow-up i {
     font-size: 3.5vmax;
