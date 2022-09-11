@@ -594,8 +594,21 @@ footer a.copyright {
   div#content main {
     padding: 0 50px;
   }
+  
+  /* SECTION HERO */
+
+  section.hero h1 {
+    font-size: 38px;
+    width: 400px;
+  }
+
+  /* END OF SECTION HERO */
 
   /* SECTION ABOUT */
+  
+  section.about h2.section-heading {
+    font-size: 30px;
+  }
 
   section.about div.about-div div.about-text {
     max-width: 100%;
@@ -647,10 +660,6 @@ footer a.copyright {
   }
 
   /* SECTION HERO */
-
-  section.about h2.section-heading {
-    font-size: 25px;
-  }
 
   section.hero h1 {
     font-size: 35px;
