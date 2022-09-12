@@ -93,3 +93,9 @@ window.addEventListener('load', () => {
 });
 
 // END OF ON WINDOW LOAD
+
+// SECTION ABOUT
+
+
+
+// END OF SECTION ABOUT
