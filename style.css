@@ -609,6 +609,10 @@ footer a.copyright {
     font-size: 30px;
   }
 
+  section.about h2.section-heading::after {
+    width: 50%;
+  }
+
   section.about div.about-div div.about-text {
     max-width: 100%;
   }
