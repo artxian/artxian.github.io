@@ -31,22 +31,22 @@
 }
 
 body {
-  background-color: #fbfbfd;
-  color: #3f3f3f;
+  background-color: #FAFAFA;
+  color: #333333;
 }
 
 a {
   text-decoration: none;
-  color: #3f3f3f;
+  color: #333333;
   transition: 0.25s ease;
 }
 
 a:hover {
-  color: #004bcc;
+  color: #007AFF;
 }
 
 a.text {
-  color: #004bcc;
+  color: #007AFF;
   overflow: hidden;
   transition: 0.25s ease;
   position: relative;
@@ -61,7 +61,7 @@ a.text::after {
   left: 0;
   width: 100%;
   height: 0.07em;
-  background-color: #004bcc;
+  background-color: #007AFF;
   transform: translate3d(-100%, 0, 0);
   transition: transform 250ms;
 }
@@ -77,23 +77,23 @@ a.text.focus::after {
 
 /* SUD */
 div.sud-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0,0,0,.3);
-      backdrop-filter: blur(6px);
-      z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
+  z-index: 9999;
 }
 
 h2.sud {
-      font-family: "SF Mono regular";
-      font-size: 12px;
-      color: white;
-      margin: auto;
+  font-family: "SF Mono regular";
+  font-size: 12px;
+  color: #FAFAFA;
+  margin: auto;
 }
 
 /* BLUR */
@@ -144,9 +144,9 @@ div.modal.active {
 /* BUTTON */
 
 .btn {
-  color: #004bcc;
+  color: #007AFF;
   background-color: rgb(0, 0, 0, 0);
-  border: 1px solid #004bcc;
+  border: 2px solid #007AFF;
   border-radius: 5px;
   padding: 0.9em 1.2em;
   box-sizing: border-box;
@@ -260,7 +260,7 @@ div.nav-menu {
   height: 100%;
   width: min(75vw, 400px);
   box-shadow: -20px 0 75px rgba(0, 0, 0, 0.25);
-  background-color: #fbfbfd;
+  background-color: #FAFAFA;
   padding: min(50px) min(10px);
   display: flex;
   flex-direction: column;
@@ -283,7 +283,7 @@ div.nav-menu ol {
   gap: 40px;
 }
 
-div.nav-menu ol li a{
+div.nav-menu ol li a {
   font-family: "SF Mono regular";
   font-size: 20px;
 }
@@ -327,7 +327,7 @@ header nav {
 .header-icon a {
   font-size: 24px;
   font-weight: 700;
-  color: #004bcc;
+  color: #007AFF;
   text-decoration: none;
 }
 
@@ -362,7 +362,7 @@ div.nav .nav-hp {
   display: none;
   text-align: center;
   font-weight: lighter;
-  color: #060d0d;
+  color: #FAFAFA;
   position: relative;
   z-index: 10;
   user-select: none;
@@ -371,7 +371,7 @@ div.nav .nav-hp {
 }
 
 div.nav .nav-hp.nav-hp-active {
-  color: #004bcc;
+  color: #007AFF;
   transform: rotate(45deg);
 }
 
@@ -416,7 +416,7 @@ section.hero h3 span.emoji.wave:hover {
 }
 
 section.hero h1 {
-  color: #060d0d;
+  color: #000000;
   font-size: 70px;
   max-width: 700px;
 }
@@ -462,8 +462,8 @@ section.about h2.section-heading {
 }
 
 section.about h2.section-heading::after {
-  content: '';
-  background-color: #060d0d;
+  content: "";
+  background-color: #333333;
   height: 1px;
   width: 300px;
   margin-left: 15px;
@@ -476,7 +476,7 @@ section.about div.about-div {
 }
 
 section.about div.about-div div.about-headshot-wrapper {
-  background-color: #060d0d;
+  background-color: #000000;
   border-radius: 12px;
   position: relative;
   width: 300px;
@@ -484,7 +484,8 @@ section.about div.about-div div.about-headshot-wrapper {
   transition: all 0.25s cubic-bezier(0.65, 0.05, 0.36, 1);
 }
 
-section.about div.about-div div.about-headshot-wrapper::before, div.about-headshot-wrapper::after {
+section.about div.about-div div.about-headshot-wrapper::before,
+div.about-headshot-wrapper::after {
   content: "";
   display: block;
   position: absolute;
@@ -496,12 +497,12 @@ section.about div.about-div div.about-headshot-wrapper::before, div.about-headsh
 section.about div.about-div div.about-headshot-wrapper::before {
   top: 0px;
   left: 0px;
-  background-color: #004bcc;
+  background-color: #007AFF;
   mix-blend-mode: screen;
 }
 
 section.about div.about-div div.about-headshot-wrapper::after {
-  border: 2px solid #060d0d;
+  border: 2px solid #333333;
   top: 20px;
   left: 20px;
   z-index: -1;
@@ -574,7 +575,7 @@ footer a.copyright {
   header {
     padding: 0 40px;
   }
-  
+
   /* END OF HEADER */
 
   div#content main {
@@ -586,7 +587,7 @@ footer a.copyright {
   section.about h2.section-heading::after {
     width: 200px;
   }
-  
+
   /* END OF SECTION ABOUT */
 }
 
@@ -596,7 +597,7 @@ footer a.copyright {
   header {
     padding: 0 25px;
   }
-  
+
   /* END OF HEADER */
 
   header div.nav a.resume {
@@ -614,7 +615,7 @@ footer a.copyright {
   div#content main {
     padding: 0 50px;
   }
-  
+
   /* SECTION HERO */
 
   section.hero h1 {
@@ -625,7 +626,7 @@ footer a.copyright {
   /* END OF SECTION HERO */
 
   /* SECTION ABOUT */
-  
+
   section.about h2.section-heading {
     font-size: 30px;
   }
@@ -645,14 +646,14 @@ footer a.copyright {
   section.about div.about-div div.about-headshot-wrapper {
     margin: 25px auto 0;
     width: 250px;
-    height: 250px;  
+    height: 250px;
   }
 
   section.about div.about-div div.about-headshot-wrapper img {
     width: 250px;
     height: 250px;
   }
-  
+
   /* END OF SECTION ABOUT */
 
   footer div.follow-up i {
@@ -668,11 +669,11 @@ footer a.copyright {
 
 @media screen and (max-width: 480px) {
   /* HEADER */
-  
+
   div.nav .nav-hp {
     font-size: 5vmax;
   }
-  
+
   /* END OF HEADER */
 
   .header-icon a {
@@ -696,7 +697,7 @@ footer a.copyright {
   section.about div.about-div div.about-text p {
     font-size: 16px;
   }
-  
+
   /* END OF SECTION ABOUT */
 
   footer div.follow-up i {
