@@ -37,6 +37,12 @@ window.addEventListener('scroll', () => {
             }, 0);
       }
 
+      if (window.pageYOffset < 10) document.querySelector('header').removeAttribute('style');
+      
+      if (window.pageYOffset >= 10) document.querySelector('header').style.boxShadow = '0 5px 40px rgba(0, 0, 0, 0.08)';
+
+      
+
       lastScroll = currentScroll;
 });
 
