@@ -3,6 +3,15 @@ const getMyAge = function (year) {
       return age;
 }
 
+const getHoursDay = function () {
+      let hours = new Date().getHours();
+      let day;
+
+      if(hours >= 1 && hours <= 9) return day = "Good morning!";
+      if(hours >= 10 && hours <= 17) return day = "Good afternoon!";
+      if(hours >= 18 && hours <= 24) return day = "Good evening!";
+}
+
 // SUD
 document.querySelector("div.sud-container").addEventListener("click", function() {
       this.remove()
@@ -106,8 +115,9 @@ window.addEventListener('load', () => {
 
 // END OF ON WINDOW LOAD
 
-// SECTION ABOUT
+// SECTION HERO
+setInterval(() => {
+      document.querySelector('.hero h3 div').innerText = getHoursDay();
+}, 1000);
 
-
-
-// END OF SECTION ABOUT
+// END OF SECTION HERO
